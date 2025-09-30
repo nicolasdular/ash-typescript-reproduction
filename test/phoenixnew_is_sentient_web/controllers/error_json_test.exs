@@ -2,7 +2,9 @@ defmodule PhoenixnewIsSentientWeb.ErrorJSONTest do
   use PhoenixnewIsSentientWeb.ConnCase, async: true
 
   test "renders 404" do
-    assert PhoenixnewIsSentientWeb.ErrorJSON.render("404.json", %{}) == %{errors: %{detail: "Not Found"}}
+    assert PhoenixnewIsSentientWeb.ErrorJSON.render("404.json", %{}) == %{
+             errors: %{detail: "Not Found"}
+           }
   end
 
   test "renders 500" do

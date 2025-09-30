@@ -10,7 +10,8 @@ defmodule PhoenixnewIsSentient.Application do
     children = [
       PhoenixnewIsSentientWeb.Telemetry,
       PhoenixnewIsSentient.Repo,
-      {DNSCluster, query: Application.get_env(:phoenixnew_is_sentient, :dns_cluster_query) || :ignore},
+      {DNSCluster,
+       query: Application.get_env(:phoenixnew_is_sentient, :dns_cluster_query) || :ignore},
       {Phoenix.PubSub, name: PhoenixnewIsSentient.PubSub},
       # Start a worker by calling: PhoenixnewIsSentient.Worker.start_link(arg)
       # {PhoenixnewIsSentient.Worker, arg},

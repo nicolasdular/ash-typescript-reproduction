@@ -35,3 +35,4 @@ phoenixnew_is_sentient-*.tar
 npm-debug.log
 /assets/node_modules/
 
+/.lexical

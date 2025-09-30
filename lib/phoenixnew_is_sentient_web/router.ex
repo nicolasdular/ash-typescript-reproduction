@@ -18,6 +18,14 @@ defmodule PhoenixnewIsSentientWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
+    get "/ash-typescript", PageController, :index
+  end
+
+  scope "/", PhoenixnewIsSentientWeb do
+    pipe_through :api
+
+    post "/rpc/run", AshTypescriptRpcController, :run
+    post "/rpc/validate", AshTypescriptRpcController, :validate
   end
 
   # Other scopes may use custom stacks.
